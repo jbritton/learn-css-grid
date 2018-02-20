@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Template Areas</title>
+
+    <style type="text/css">
+        .container {
+            height: 100%;
+            display: grid;
+            grid-gap: 5px;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: 40px 500px 40px;
+
+            /* defines keyed matrix - must match # of grid rows and columns */
+            grid-template-areas:
+                "h h h h h h h h h h h h"
+                "m c c c c c c c c c c c"
+                "m f f f f f f f f f f f";
+        }
+
+        .container > div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+            color: #fff;
+            background: #f60;
+            border: 1px solid #f30;
+        }
+
+
+        .header {
+            /* element will occupy the 'h' grid cells */
+            grid-area: h;
+        }
+
+        .menu {
+            /* element will occupy the 'm' grid cells */
+            grid-area: m;
+        }
+
+        .content {
+            /* element will occupy the 'c' grid cells */
+            grid-area: c;
+        }
+
+        .footer {
+            /* element will occupy the 'f' grid cells */
+            grid-area: f;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="container container-grid">
+    <div class="header">HEADER</div>
+    <div class="menu">MENU</div>
+    <div class="content">CONTENT</div>
+    <div class="footer">FOOTER</div>
+</body>
+</html>

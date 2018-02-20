@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Image Grid</title>
+
+    <style type="text/css">
+        .container {
+            display: grid;
+            grid-gap: 5px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-auto-rows: 200px;
+
+        }
+
+        .container > div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+            color: #fff;
+            background: #eee;
+            border: 1px solid #ccc;
+        }
+
+        .container > div > img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .horizontal {
+
+        }
+
+        .vertical {
+
+        }
+
+        .big {
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div><img src="http://placebeard.it/300/200/cats" /></div>
+        <div><img src="http://placebeard.it/300/200/fashion" /></div>
+        <div><img src="http://placebeard.it/300/200/sports" /></div>
+        <div><img src="http://placebeard.it/300/200/business" /></div>
+        <div><img src="http://placebeard.it/300/200/people" /></div>
+        <div><img src="http://placebeard.it/300/200/transport" /></div>
+        <div><img src="http://placebeard.it/300/200/animals" /></div>
+        <div><img src="http://placebeard.it/300/200/food" /></div>
+        <div><img src="http://placebeard.it/300/200/nature" /></div>
+        <div><img src="http://placebeard.it/300/200/nightlife" /></div>
+        <div><img src="http://placebeard.it/300/200/sports" /></div>
+        <div><img src="http://placebeard.it/300/200/fashion" /></div>
+    </div>
+</body>
+</html>

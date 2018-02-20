@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fraction Units and Repeat</title>
+
+    <style type="text/css">
+        .container {
+            border: 1px solid #ccc;
+            margin: 20px;
+        }
+
+        .container > div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+            color: #fff;
+            background: #f60;
+            border: 1px solid #f30;
+        }
+
+        /* fr => fraction units */
+        .container-25-50-25 {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-auto-rows: 50px;
+            grid-gap: 3px;
+        }
+
+        .container-third-repeat {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 100px);
+            grid-gap: 3px;
+        }
+
+        .container-sixth-repeat {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: 50px;
+            grid-gap: 3px;
+        }
+
+        /* shorthand syntax => rows / columns */
+        .container-shorthand {
+            display: grid;
+            grid-template: repeat(3, 100px) / repeat(2, 1fr);
+            grid-gap: 3px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container container-shorthand">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+</body>
+</html>
