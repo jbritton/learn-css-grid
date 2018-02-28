@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Named Lines</title>
+
+    <style type="text/css">
+
+
+        .container {
+            height: 100%;
+            display: grid;
+            grid-gap: 3px;
+            grid-template-columns: [main-start] 1fr [content-start] 5fr [content-end main-end];
+            grid-template-rows: 40px 500px 40px;
+        }
+
+        .container > div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+            background: #f60;
+            color: #fff;
+        }
+
+        .header {
+            /*grid-column: main-start / main-end;*/
+            grid-column: main;
+        }
+
+        .menu {}
+
+        .content {
+            /*grid-column: content-start / content-end;*/
+            grid-column: content;
+        }
+
+        .footer {
+            grid-column: 1 / 3;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">HEADER</div>
+        <div class="menu">MENU</div>
+        <div class="content">CONTENT</div>
+        <div class="footer">FOOTER</div>
+    </div>
+</body>
+</html>
