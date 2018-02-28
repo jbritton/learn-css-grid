@@ -14,6 +14,8 @@
             height: 100%;
             display: grid;
             grid-gap: 3px;
+
+            /* naming the grid lines */
             grid-template-columns: [main-start] 1fr [content-start] 5fr [content-end main-end];
             grid-template-rows: 40px 500px 40px;
         }
@@ -28,7 +30,10 @@
         }
 
         .header {
+            /* referencing the named grid lines  */
             /*grid-column: main-start / main-end;*/
+
+            /* shorthand syntax - reference the prefix for the start and end  */
             grid-column: main;
         }
 
